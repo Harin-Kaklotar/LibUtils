@@ -1,4 +1,27 @@
 # LibUtils
+
+## How to
+**Step 1. Add the JitPack repository to your build file**
+
+Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+**Step 2. Add the dependency**
+```
+dependencies {
+	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.0'
+	}
+```
+**Step 3. init**
+```
+Utils.init(context);
+```
 目录如下所示：
 
 > - **Activity相关→[ActivityUtils.java][activity.java]**
@@ -536,13 +559,6 @@ getEntries        : 获取压缩文件中的文件对象
 
 ***
 
-
-
-## How to use
-
-```
-Utils.init(context);
-```
 
 ## Proguard
 
