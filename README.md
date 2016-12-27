@@ -95,7 +95,10 @@ getIntent : 获取剪贴板的意图
 closeIO       : 关闭IO
 closeIOQuietly: 安静关闭IO
  ```
-
+> - **CompoundDrawables相关→[CompoundDrawablesUtil.java][CompoundDrawablesUtil.java]**
+  ```
+ getCompoundDrawables: 根据Drawable id 动态改变大小
+  ```
 > - **常量相关→[ConstUtils.java][const.java]**
  ```
 MemoryConst: 存储相关常量
@@ -224,7 +227,14 @@ getFileName              : 根据全路径获取文件名
 getFileNameNoExtension   : 根据全路径获取文件名不带拓展名
 getFileExtension         : 根据全路径获取文件拓展名
  ```
-
+> - **FrescoImagePipelineUtils相关→[FrescoImagePipelineUtils.java][FrescoImagePipelineUtils.java]**
+```
+getDraweeController: 根据Uri，SimpleDraweeView 获取DraweeController
+```
+> - **FrescoUtils[FrescoUtils.java][FrescoUtils.java]**
+```
+isDownloaded: 根据Uri判断是否已下载缓存
+```
 > - **Handler相关→[HandlerUtils.java][handler.java]**
  ```
 HandlerHolder: 使用必读
@@ -273,7 +283,7 @@ getShutdownIntent          : 获取关机的意图
 getCaptureIntent           : 获取拍照的意图
  ```
 
-> - **键盘相关→[KeyboardUtils.java][keyboard.java]*
+> - **键盘相关→[KeyboardUtils.java][keyboard.java]**
  ```
 hideSoftInput               : 动态隐藏软键盘
 clickBlankArea2HideSoftInput: 点击屏幕空白区域隐藏软键盘
@@ -530,12 +540,7 @@ getZodiac               : 获取星座
 
 > - **吐司相关→[ToastUtils.java][toast.java]**
  ```
-init              : 吐司初始化
-showShortToastSafe: 安全地显示短时吐司
-showLongToastSafe : 安全地显示长时吐司
-showShortToast    : 显示短时吐司
-showLongToast     : 显示长时吐司
-cancelToast       : 取消吐司显示
+showToast         : 吐司初始化
  ```
 
 > - **压缩相关→[ZipUtils.java][zip.java]**
@@ -590,6 +595,8 @@ limitations under the License.
 
 [close.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/CloseUtils.java
 
+[CompoundDrawablesUtil.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/CompoundDrawablesUtil.java
+
 [const.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ConstUtils.java
 
 [convert.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ConvertUtils.java
@@ -603,7 +610,8 @@ limitations under the License.
 [encrypt.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/EncryptUtils.java
 
 [file.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/FileUtils.java
-
+[FrescoImagePipelineUtils.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/FrescoImagePipelineUtils.java
+[FrescoUtils.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/FrescoUtils.java
 [handler.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/HandlerUtils.java
 [image.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ImageUtils.java
 
