@@ -456,23 +456,17 @@ append            : 追加样式字符串
 create            : 创建样式字符串
  ```
 
-> - **SP相关→[SPUtils.java][sp.java]**
+> - **SharedPreferences相关→[PreferenceUtils.java][sp.java]**
  ```
-SPUtils   : SPUtils构造函数
-putString : SP中写入String类型value
-getString : SP中读取String
-putInt    : SP中写入int类型value
-getInt    : SP中读取int
-putLong   : SP中写入long类型value
-getLong   : SP中读取long
-putFloat  : SP中写入float类型value
-getFloat  : SP中读取float
-putBoolean: SP中写入boolean类型value
-getBoolean: SP中读取boolean
-getAll    : SP中获取所有键值对
-remove    : SP中移除该key
-contains  : SP中是否存在该key
-clear     : SP中清除所有数据
+saveParam      : SP中写入String类型value
+getStringParam : SP中读取String
+saveParam      : SP中写入int类型value
+getIntParam    : SP中读取int
+saveParam      : SP中写入long类型value
+getLongParam   : SP中读取long
+saveParam      : SP中写入boolean类型value
+getBooleanParam: SP中读取boolean
+clearParam     : SP中清除所有数据
  ```
 
 > - **字符串相关→[StringUtils.java][string.java]**
@@ -567,73 +561,89 @@ getEntries        : 获取压缩文件中的文件对象
 -keepclassmembers class com.codyy.lib.util.** { *; }
 -dontwarn com.codyy.lib.util.**
 ```
+## [LICENSE](https://github.com/CodyyAndroid/LibUtils/blob/master/LICENSE)
+```
+Copyright 2016 codyy
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
 
 
-[activity.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ActivityUtils.java
-[app.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/AppUtils.java
+[activity.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ActivityUtils.java
+[app.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/AppUtils.java
 
-[bar.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/BarUtils.java
+[bar.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/BarUtils.java
 
-[clean.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/CleanUtils.java
+[clean.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/CleanUtils.java
 
-[clipboard.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ClipboardUtils.java
+[clipboard.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ClipboardUtils.java
 
-[close.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/CloseUtils.java
+[close.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/CloseUtils.java
 
-[const.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ConstUtils.java
+[const.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ConstUtils.java
 
-[convert.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ConvertUtils.java
+[convert.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ConvertUtils.java
 
-[device.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/DeviceUtils.java
+[device.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/DeviceUtils.java
 
-[empty.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/EmptyUtils.java
+[empty.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/EmptyUtils.java
 
-[encode.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/EncodeUtils.java
+[encode.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/EncodeUtils.java
 
-[encrypt.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/EncryptUtils.java
+[encrypt.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/EncryptUtils.java
 
-[file.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/FileUtils.java
+[file.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/FileUtils.java
 
-[handler.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/HandlerUtils.java
-[image.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ImageUtils.java
+[handler.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/HandlerUtils.java
+[image.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ImageUtils.java
 
-[intent.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/IntentUtils.java
+[intent.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/IntentUtils.java
 
-[keyboard.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/KeyboardUtils.java
+[keyboard.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/KeyboardUtils.java
 
-[log.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/LogUtils.java
+[log.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/LogUtils.java
 
-[network.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/NetworkUtils.java
-[phone.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/PhoneUtils.java
+[network.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/NetworkUtils.java
+[phone.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/PhoneUtils.java
 
-[pinyin.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/PinyinUtils.java
+[pinyin.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/PinyinUtils.java
 
-[process.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ProcessUtils.java
+[process.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ProcessUtils.java
 
-[regex.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/RegexUtils.java
+[regex.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/RegexUtils.java
 
-[screen.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ScreenUtils.java
+[screen.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ScreenUtils.java
 
-[sdcard.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/SDCardUtils.java
+[sdcard.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/SDCardUtils.java
 
-[service.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ServiceUtils.java
+[service.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ServiceUtils.java
 
-[shell.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ShellUtils.java
+[shell.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ShellUtils.java
 
-[size.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/SizeUtils.java
+[size.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/SizeUtils.java
 
-[snackbar.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/SnackbarUtils.java
+[snackbar.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/SnackbarUtils.java
 
-[spannable.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/SpannableStringUtils.java
+[spannable.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/SpannableStringUtils.java
 
-[sp.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/PreferenceUtils.java
+[sp.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/PreferenceUtils.java
 
-[string.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/StringUtils.java
+[string.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/StringUtils.java
 
-[thread_pool.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ThreadPoolUtils.java
+[thread_pool.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ThreadPoolUtils.java
 
-[time.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/TimeUtils.java
+[time.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/TimeUtils.java
 
-[toast.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ToastUtils.java
+[toast.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ToastUtils.java
 
-[zip.java]: https://github.com/CodyyAndroid/lib.utils/blob/master/src/main/java/com/codyy/lib/utils/ZipUtils.java
+[zip.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ZipUtils.java
