@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lib.utils</string>
+    <string name="click_to_refresh">没有数据，点击刷新。</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_toast_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/toast_text"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="14dp"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        tools:text="请重新操作" />
+</LinearLayout>
