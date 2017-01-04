@@ -46,7 +46,7 @@ public class IntentUtils {
         if (manager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
             context.startActivity(intent);
         } else {
-            ToastUtil.showToast(context, "无法打开此类型文件,请在应用市场下载!");
+            ToastUtil.show("无法打开此类型文件,请在应用市场下载!");
             Intent intent1 = new Intent();
             intent1.setAction(Intent.ACTION_MAIN);
             intent1.addCategory(Intent.CATEGORY_APP_MARKET);

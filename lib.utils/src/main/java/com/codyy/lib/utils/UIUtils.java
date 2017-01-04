@@ -124,10 +124,10 @@ public final class UIUtils {
      * @param msg
      * @param duration
      */
-    public static void toast(Context context, String msg, int duration) {
+    /*public static void toast(Context context, String msg, int duration) {
         if (context == null) return;
         ToastUtil.showToast(context, msg, duration);
-    }
+    }*/
 
 
     /**
