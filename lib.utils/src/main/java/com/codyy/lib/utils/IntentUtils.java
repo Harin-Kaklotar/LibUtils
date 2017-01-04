@@ -39,9 +39,14 @@ public class IntentUtils {
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_DEFAULT);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         //设置intent的data和Type属性。
-        intent.setDataAndType(TextUtils.isEmpty(authority) ? Uri.fromFile(file) : FileProvider.getUriForFile(context, authority, file), MimeTypeMap.getSingleton().getMimeTypeFromExtension(FileUtils.getFileExtension(file)));
+        if (TextUtils.isEmpty(authority)) return;
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.setDataAndType(FileProvider.getUriForFile(context, authority, file), MimeTypeMap.getSingleton().getMimeTypeFromExtension(FileUtils.getFileExtension(file)));
+        } else {
+            intent.setDataAndType(Uri.fromFile(file), MimeTypeMap.getSingleton().getMimeTypeFromExtension(FileUtils.getFileExtension(file)));
+        }
         PackageManager manager = context.getPackageManager();
         if (manager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
             context.startActivity(intent);
