@@ -15,7 +15,7 @@ allprojects {
 **Step 2. Add the dependency**
 ```
 dependencies {
-	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.0'
+	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.1'
 	}
 ```
 **Step 3. init**
@@ -540,7 +540,7 @@ getZodiac               : 获取星座
 
 > - **吐司相关→[ToastUtils.java][toast.java]**
  ```
-showToast         : 吐司初始化
+show         : 吐司初始化
  ```
 
 > - **压缩相关→[ZipUtils.java][zip.java]**
