@@ -15,7 +15,7 @@ allprojects {
 **Step 2. Add the dependency**
 ```
 dependencies {
-	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.2'
+	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.3'
 	}
 ```
 **Step 3. init**
@@ -148,6 +148,10 @@ reboot2Bootloader: 重启到bootloader
 isEmpty   : 判断对象是否为空
 isNotEmpty: 判断对象是否非空
  ```
+> - **模拟器判断→[EmulatorUtils.java][emulator.java]**
+```
+isEmulator:true for emulator,false for real device
+```
 
 > - **编码解码相关→[EncodeUtils.java][encode.java]**
  ```
@@ -655,3 +659,4 @@ limitations under the License.
 [toast.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ToastUtils.java
 
 [zip.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/ZipUtils.java
+[emulator.java]: https://github.com/CodyyAndroid/LibUtils/tree/master/lib.utils/src/main/java/com/codyy/lib/utils/EmulatorUtils.java
