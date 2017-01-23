@@ -1,8 +1,10 @@
 package com.codyy.lib.utils.sample;
 
-import org.junit.Test;
+import android.util.Log;
 
-import static org.junit.Assert.*;
+import com.codyy.lib.utils.ConvertUtils;
+
+import org.junit.Test;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +14,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+//        assertEquals(4, 2 + 2);
+       Log.e("a",ConvertUtils.bytes2HexString("a".getBytes()));
     }
 }

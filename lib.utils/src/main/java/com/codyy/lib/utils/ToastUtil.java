@@ -17,20 +17,25 @@ public class ToastUtil {
     private static final int LONG_DELAY = 3500;
     private static final int SHORT_DELAY = 2000;
     private static WindowManager sWindowManager;
+    static View view = null;
+    static TextView textView = null;
 
     static void init() {
         sWindowManager = (WindowManager) Utils.getContext().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+        view = LayoutInflater.from(Utils.getContext()).inflate(R.layout.toast_layout, null);
+        textView = (TextView) view.findViewById(R.id.toast_text);
     }
 
     public static void show(String text) {
-        if(sWindowManager==null) init();
+        if (sWindowManager == null) init();
         show(text, LENGTH_SHORT);
     }
 
     public static void show(final String text, int length) {
-        if(sWindowManager==null) init();
-        final View view = LayoutInflater.from(Utils.getContext()).inflate(R.layout.toast_layout, null);
-        final TextView textView = (TextView) view.findViewById(R.id.toast_text);
+        if (sWindowManager == null) init();
+        if (view.getParent() != null) {
+            sWindowManager.removeView(view);
+        }
         textView.setText(text);
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.type = WindowManager.LayoutParams.TYPE_TOAST;
@@ -44,7 +49,9 @@ public class ToastUtil {
         view.postDelayed(new Runnable() { // 指定时间后，取消 Toast 显示
             @Override
             public void run() {
-                sWindowManager.removeView(view);
+                if(view.getParent()!=null) {
+                    sWindowManager.removeView(view);
+                }
             }
         }, length == LENGTH_SHORT ? SHORT_DELAY : LONG_DELAY);
     }
