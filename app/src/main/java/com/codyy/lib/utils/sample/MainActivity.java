@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codyy.lib.crash.CrashMail;
 import com.codyy.lib.crash.MailUtils;
@@ -24,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
 //        LogUtils.e("lzw", EncryptUtils.encryptMD5ToString("LZW").toLowerCase());
         TextView textView= (TextView) findViewById(R.id.tv_log);
         textView.setText(EmulatorUtils.getDeviceListing());
-        ToastUtil.show("无法打开此类型文件,请在应用市场下载!");
+//        ToastUtil.show("无法打开此类型文件,请在应用市场下载!");
         ToastUtil.show("无法打开此类型文件,请在应用市场下载!2");
+        Toast.makeText(this,"test",Toast.LENGTH_SHORT).show();
 //        ToastUtil.show("无法打开此类型文件,请在应用市场下载!32");
        /* if (EmulatorUtils.isEmulator()) {
             ToastUtil.show("模拟器");
