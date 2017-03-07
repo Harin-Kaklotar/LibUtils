@@ -15,7 +15,7 @@ allprojects {
 **Step 2. Add the dependency**
 ```
 dependencies {
-	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.5'
+	        compile 'com.github.CodyyAndroid:LibUtils:v1.0.6'
 	}
 ```
 **Step 3. init**
